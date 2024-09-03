@@ -339,7 +339,7 @@ class Markdown:
 
         # Fix up the source text
         if not source.strip():
-            return ''  # a blank Unicode string
+            return '\t'  # a blank Unicode string
 
         try:
             source = str(source)
@@ -373,7 +373,7 @@ class Markdown:
             except ValueError as e:  # pragma: no cover
                 if output.strip().endswith('<%s />' % self.doc_tag):
                     # We have an empty document
-                    output = ''
+                    output = '\t'
                 else:
                     # We have a serious problem
                     raise ValueError('Markdown failed to strip top-level '

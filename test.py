@@ -23,20 +23,20 @@ somemd = """
 ### Build Mayil
 
 ```bash
-docker build -t mayil --platform linux/arm64 --build-arg IMAGE_IDENTIFIER="$(date +%Y%m%d-%H%M%S):$(git rev-parse --short HEAD)" .
+    docker build -t mayil --platform linux/arm64 --build-arg IMAGE_IDENTIFIER="$(date +%Y%m%d-%H%M%S):$(git rev-parse --short HEAD)" .
 ```
 
 ### Run Milvus locally
 
 ```bash
-docker-compose -f ./test_utils/local_test_setup/docker-compose.yml up -d
+            docker-compose -f ./test_utils/local_test_setup/docker-compose.yml up -d
 ```
 
-Database files for the local run will be saved to `./test_utils/milvus_test_setup/test_volumes`. Do not delete this folder if you want to persist data.
+    Database files for the local run will be saved to `./test_utils/milvus_test_setup/test_volumes`. Do not delete this folder if you want to persist data.
 
 
 """
 
-html = markdown.markdown(somemd)
-print(html)
+html = markdown.markdown("", tab_length=12)
+print("|", html, "|")
 print("---------------------------------")
