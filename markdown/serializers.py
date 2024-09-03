@@ -72,8 +72,6 @@ def _escape_cdata(text) -> str:
             text = RE_AMP.sub('&amp;', text)
         if "<" in text:
             text = text.replace("<", "&lt;")
-        if ">" in text:
-            text = text.replace(">", "&gt;")
         return text
     except (TypeError, AttributeError):  # pragma: no cover
         _raise_serialization_error(text)
