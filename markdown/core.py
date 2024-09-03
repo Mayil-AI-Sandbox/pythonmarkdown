@@ -337,9 +337,8 @@ class Markdown:
 
         """
 
-        # Fix up the source text
-        if not source.strip():
-            return '\t'  # a blank Unicode string
+        if not source.strip(): #Empty string
+            return '\t'
 
         try:
             source = str(source)
